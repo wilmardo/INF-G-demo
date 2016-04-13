@@ -1,9 +1,9 @@
-package com.company.Models;
+package Models;
 
 /**
  * Created by nektariosevangelou on 11/04/16.
  */
-public class Department_branch {
+public class DepartmentBranch {
 
     public int id;
     public int department_id;

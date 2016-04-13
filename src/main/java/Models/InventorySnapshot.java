@@ -1,11 +1,11 @@
-package com.company.Models;
+package Models;
 
 import java.sql.Date;
 
 /**
  * Created by nektariosevangelou on 11/04/16.
  */
-public class Inventory_snapshot {
+public class InventorySnapshot {
 
     public int physical_product_id;
     public int inventory_location_id;

@@ -1,9 +1,9 @@
-package com.company.Models;
+package Models;
 
 /**
  * Created by nektariosevangelou on 11/04/16.
  */
-public class Payment_method {
+public class PaymentMethod {
 
     public int id;
     public String name;

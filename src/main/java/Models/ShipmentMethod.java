@@ -3,18 +3,10 @@ package Models;
 /**
  * Created by nektariosevangelou on 11/04/16.
  */
-public class Business_type {
+public class ShipmentMethod {
 
     public int id;
     public String name;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public int getId() {
         return id;
@@ -22,5 +14,13 @@ public class Business_type {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

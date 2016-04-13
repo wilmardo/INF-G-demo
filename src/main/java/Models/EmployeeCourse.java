@@ -1,9 +1,9 @@
-package com.company.Models;
+package Models;
 
 /**
  * Created by nektariosevangelou on 11/04/16.
  */
-public class Employee_course {
+public class EmployeeCourse {
 
     public int employee_id;
     public int course_id;

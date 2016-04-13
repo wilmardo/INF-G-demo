@@ -1,11 +1,11 @@
-package com.company.Models;
+package Models;
 
 import java.sql.Date;
 
 /**
  * Created by nektariosevangelou on 11/04/16.
  */
-public class Physical_product {
+public class PhysicalProduct {
 
     public int product_id;
     public int phyiscal_product_type_id;

@@ -1,11 +1,11 @@
-package com.company.Models;
+package Models;
 
 import java.sql.Date;
 
 /**
  * Created by nektariosevangelou on 11/04/16.
  */
-public class Travel_price {
+public class TravelPrice {
 
     public int travel_product_id;
     public Date start_date;

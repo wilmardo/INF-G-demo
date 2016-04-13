@@ -1,9 +1,9 @@
-package com.company.Models;
+package Models;
 
 /**
  * Created by nektariosevangelou on 11/04/16.
  */
-public class Travel_partner {
+public class TravelPartner {
 
     public int id;
     public String first_name;

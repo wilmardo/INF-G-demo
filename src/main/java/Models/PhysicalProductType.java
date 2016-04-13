@@ -1,11 +1,12 @@
-package com.company.Models;
+package Models;
 
 /**
  * Created by nektariosevangelou on 11/04/16.
  */
-public class Inventory_location {
+public class PhysicalProductType {
 
     public int id;
+    public int physical_product_group_id;
     public String name;
 
     public int getId() {
@@ -22,5 +23,13 @@ public class Inventory_location {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public int getPhysical_product_group_id() {
+        return physical_product_group_id;
+    }
+
+    public void setPhysical_product_group_id(int physical_product_group_id) {
+        this.physical_product_group_id = physical_product_group_id;
     }
 }

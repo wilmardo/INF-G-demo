@@ -1,9 +1,9 @@
-package com.company.Models;
+package Models;
 
 /**
  * Created by nektariosevangelou on 11/04/16.
  */
-public class Travel_product_excursion {
+public class TravelProductExcursion {
 
     public int travel_product_id;
     public int travel_excursion_id;
