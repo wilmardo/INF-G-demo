@@ -1,14 +1,14 @@
-package com.company.Models;
+package Models;
 
 import java.sql.Date;
 
 /**
  * Created by nektariosevangelou on 11/04/16.
  */
-public class Outgoing_order {
+public class IncomingOrder {
 
     public int order_id;
-    public int customer_id;
+    public int supplier_id;
     public int employee_id;
     public Date date;
 
@@ -20,12 +20,12 @@ public class Outgoing_order {
         this.order_id = order_id;
     }
 
-    public int getCustomer_id() {
-        return customer_id;
+    public int getSupplier_id() {
+        return supplier_id;
     }
 
-    public void setCustomer_id(int customer_id) {
-        this.customer_id = customer_id;
+    public void setSupplier_id(int supplier_id) {
+        this.supplier_id = supplier_id;
     }
 
     public int getEmployee_id() {

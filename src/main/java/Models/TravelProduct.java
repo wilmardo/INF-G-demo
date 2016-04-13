@@ -1,11 +1,11 @@
-package com.company.Models;
+package Models;
 
 import java.sql.Time;
 
 /**
  * Created by nektariosevangelou on 11/04/16.
  */
-public class Travel_product {
+public class TravelProduct {
 
     public int product_id;
     public int travel_product_method_id;

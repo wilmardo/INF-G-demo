@@ -1,9 +1,9 @@
-package com.company.Models;
+package Models;
 
 /**
  * Created by nektariosevangelou on 11/04/16.
  */
-public class Physical_product_orderline {
+public class PhysicalProductOrderline {
 
     public int id;
     public int order_id;

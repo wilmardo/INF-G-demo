@@ -1,9 +1,9 @@
-package com.company.Models;
+package Models;
 
 /**
  * Created by nektariosevangelou on 11/04/16.
  */
-public class Return_product {
+public class ReturnProduct {
 
     public int return_application_id;
     public int physical_product_orderline_id;

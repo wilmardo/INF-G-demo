@@ -1,9 +1,9 @@
-package com.company.Models;
+package Models;
 
 /**
  * Created by nektariosevangelou on 11/04/16.
  */
-public class Job_title_course {
+public class JobTitleCourse {
 
     public int job_title_id;
     public int course_id;
