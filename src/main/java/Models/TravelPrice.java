@@ -7,16 +7,16 @@ import java.sql.Date;
  */
 public class TravelPrice {
 
-    public int travel_product_id;
+    public String travel_product_id;
     public Date start_date;
     public Date end_date;
     public float price;
 
-    public int getTravel_product_id() {
+    public String getTravel_product_id() {
         return travel_product_id;
     }
 
-    public void setTravel_product_id(int travel_product_id) {
+    public void setTravel_product_id(String travel_product_id) {
         this.travel_product_id = travel_product_id;
     }
 
