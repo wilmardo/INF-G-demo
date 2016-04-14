@@ -5,7 +5,7 @@
  */
 package Views;
 
-import Helpers.DbConnection;
+import Helpers.DBConnection;
 import javax.swing.table.DefaultTableModel;
         
 /**
@@ -80,7 +80,7 @@ public class MedewerkersFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void getButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_getButtonActionPerformed
-        DbConnection conn = new DbConnection();
+        DBConnection conn = new DBConnection();
         DefaultTableModel model = (DefaultTableModel) conn.getTableFromDb("employee");
         medewerkersTable.setModel(model);
     }//GEN-LAST:event_getButtonActionPerformed

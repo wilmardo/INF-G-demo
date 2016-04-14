@@ -1,7 +1,6 @@
 package Helpers;
 
 import java.sql.*;
-import java.util.ArrayList;
 import java.util.Vector;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -12,20 +11,20 @@ import javax.swing.table.TableModel;
  *
  * @author TTT
  */
-public class DbConnection 
+public class DBConnection
 {
-    public static DbConnection getInstance() {
+    public static DBConnection getInstance() {
         return NewDbConnectionHolder.INSTANCE;
     }
     
     private static class NewDbConnectionHolder {
 
-        private static final DbConnection INSTANCE = new DbConnection();
+        private static final DBConnection INSTANCE = new DBConnection();
     }
     private Statement statement;
     private Connection sqlConnection;
     
-    public DbConnection()
+    public DBConnection()
     {
         init();
     }
@@ -43,7 +42,7 @@ public class DbConnection
             return buildTableModel(r);
             
         } catch (SQLException ex) {
-            Logger.getLogger(DbConnection.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DBConnection.class.getName()).log(Level.SEVERE, null, ex);
             return null;
         }
     }
@@ -94,7 +93,7 @@ public class DbConnection
                statement = sqlConnection.createStatement();
 
            } catch (SQLException ex) {
-               Logger.getLogger(DbConnection.class.getName()).log(Level.SEVERE, null, ex);
+               Logger.getLogger(DBConnection.class.getName()).log(Level.SEVERE, null, ex);
            }
        }
     }
@@ -105,7 +104,7 @@ public class DbConnection
             if(!sqlConnection.isClosed())
                 statement.execute(query);
         } catch (SQLException ex) {
-            Logger.getLogger(DbConnection.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DBConnection.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     
