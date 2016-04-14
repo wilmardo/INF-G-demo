@@ -7,5 +7,6 @@ public class Main {
 		new TravelMethodOverviewFrame();
 		new TravelLocationOverviewFrame();
 		new TravelProductOverviewFrame();
+		new TravelPriceOverviewFrame();
 	}
 }

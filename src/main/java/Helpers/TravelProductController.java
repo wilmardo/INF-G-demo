@@ -1,5 +1,6 @@
 package Helpers;
 
+import javax.swing.*;
 import javax.swing.table.TableModel;
 import java.sql.*;
 import java.util.logging.*;
@@ -23,6 +24,26 @@ public class TravelProductController {
 					"LEFT JOIN `INF-G`.`travel_product_location` tpl ON tp.fk_travel_product_location_id = tpl.id " +
 					"LEFT JOIN `INF-G`.`travel_product_method` tpm ON tp.fk_travel_product_method_id = tpm.id;");
 			return DBController.buildTableModel(resultSet);
+
+		} catch (SQLException ex) {
+			Logger.getLogger(DBController.class.getName()).log(Level.SEVERE, null, ex);
+			return null;
+		}
+	}
+
+	public ComboBoxModel getAllNames() {
+		ResultSet resultSet;
+
+		try {
+			DefaultComboBoxModel list = new DefaultComboBoxModel();
+
+			resultSet = DBController.statement.executeQuery("SELECT `name` FROM `INF-G`." + tableName);
+
+			while (resultSet.next()) {
+				list.addElement(resultSet.getObject(1).toString());
+			}
+
+			return list;
 
 		} catch (SQLException ex) {
 			Logger.getLogger(DBController.class.getName()).log(Level.SEVERE, null, ex);
