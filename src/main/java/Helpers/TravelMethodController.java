@@ -7,13 +7,13 @@ import java.util.logging.*;
 
 import Models.*;
 
-public class TravelLocationController {
+public class TravelMethodController {
 	private DBController dbController;
 	private String tableName;
 
-	public TravelLocationController() {
+	public TravelMethodController() {
 		dbController = new DBController();
-		tableName = "travel_product_location";
+		tableName = "travel_product_method";
 	}
 
 	public TableModel getAll() {
@@ -49,49 +49,49 @@ public class TravelLocationController {
 		}
 	}
 
-	public void insert(TravelLocation travelLocation) {
+	public void insert(TravelMethod travelMethod) {
 		try {
 			String statement = "INSERT INTO `INF-G`." + tableName + " (name) VALUES (?)";
 			PreparedStatement preparedStatement = DBController.connection.prepareStatement(statement);
 
-			preparedStatement.setString	(1, travelLocation.getName());
+			preparedStatement.setString	(1, travelMethod.getName());
 
 			preparedStatement.executeUpdate();
 			preparedStatement.close();
 		}
 		catch (SQLException ex) {
-			Logger.getLogger(TravelLocationController.class.getName()).log(Level.SEVERE, null, ex);
+			Logger.getLogger(TravelMethodController.class.getName()).log(Level.SEVERE, null, ex);
 		}
 	}
 
-	public void update(TravelLocation travelLocation) {
+	public void update(TravelMethod travelMethod) {
 		try {
 			String statement = "UPDATE `INF-G`." + tableName + " SET `name` = ? WHERE `id` = ?";
 			PreparedStatement preparedStatement = DBController.connection.prepareStatement(statement);
 
-			preparedStatement.setString(1, travelLocation.getName());
-			preparedStatement.setInt(2, travelLocation.getId());
+			preparedStatement.setString(1, travelMethod.getName());
+			preparedStatement.setInt(2, travelMethod.getId());
 
 			preparedStatement.executeUpdate();
 			preparedStatement.close();
 		}
 		catch (SQLException ex) {
-			Logger.getLogger(TravelLocationController.class.getName()).log(Level.SEVERE, null, ex);
+			Logger.getLogger(TravelMethodController.class.getName()).log(Level.SEVERE, null, ex);
 		}
 	}
 
-	public void delete(TravelLocation travelLocation) {
+	public void delete(TravelMethod travelMethod) {
 		try {
 			String statement = "DELETE FROM `INF-G`." + tableName + " WHERE `id` = ?";
 			PreparedStatement preparedStatement = DBController.connection.prepareStatement(statement);
 
-			preparedStatement.setInt(1, travelLocation.getId());
+			preparedStatement.setInt(1, travelMethod.getId());
 
 			preparedStatement.executeUpdate();
 			preparedStatement.close();
 		}
 		catch (SQLException ex) {
-			Logger.getLogger(TravelLocationController.class.getName()).log(Level.SEVERE, null, ex);
+			Logger.getLogger(TravelMethodController.class.getName()).log(Level.SEVERE, null, ex);
 		}
 	}
 }
