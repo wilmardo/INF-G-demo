@@ -7,17 +7,17 @@ package Views;
 
 import Helpers.DBConnection;
 import javax.swing.table.DefaultTableModel;
-        
+
 /**
  *
- * @author Wilmar
+ * @author nektariosevangelou
  */
-public class MedewerkersFrame extends javax.swing.JFrame {
+public class TargetFrame extends javax.swing.JFrame {
 
     /**
-     * Creates new form MedewerkersFrame
+     * Creates new form TargetFrame
      */
-    public MedewerkersFrame() {
+    public TargetFrame() {
         initComponents();
     }
 
@@ -30,20 +30,13 @@ public class MedewerkersFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        getButton = new javax.swing.JButton();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        medewerkersTable = new javax.swing.JTable();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        targetTable = new javax.swing.JTable();
+        getTargets = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        getButton.setText("Get Medewerkers");
-        getButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                getButtonActionPerformed(evt);
-            }
-        });
-
-        medewerkersTable.setModel(new javax.swing.table.DefaultTableModel(
+        targetTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -54,36 +47,41 @@ public class MedewerkersFrame extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        medewerkersTable.setFillsViewportHeight(true);
-        jScrollPane2.setViewportView(medewerkersTable);
+        jScrollPane1.setViewportView(targetTable);
+
+        getTargets.setText("Get Targets");
+        getTargets.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                getTargetsActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane1)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 907, Short.MAX_VALUE)
-                .addComponent(getButton))
-            .addComponent(jScrollPane2)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(getTargets)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 699, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 275, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(getButton))
+                .addComponent(getTargets))
         );
-
-        getButton.getAccessibleContext().setAccessibleName("GetMedewerkers");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void getButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_getButtonActionPerformed
+    private void getTargetsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_getTargetsActionPerformed
         DBConnection conn = new DBConnection();
-        DefaultTableModel model = (DefaultTableModel) conn.getTableFromDb("employee");
-        medewerkersTable.setModel(model);
-    }//GEN-LAST:event_getButtonActionPerformed
+        DefaultTableModel model = (DefaultTableModel) conn.getTableFromDb("target");
+        targetTable.setModel(model);
+    }//GEN-LAST:event_getTargetsActionPerformed
 
     /**
      * @param args the command line arguments
@@ -102,27 +100,27 @@ public class MedewerkersFrame extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MedewerkersFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TargetFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MedewerkersFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TargetFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MedewerkersFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TargetFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MedewerkersFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TargetFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MedewerkersFrame().setVisible(true);
+                new TargetFrame().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton getButton;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable medewerkersTable;
+    private javax.swing.JButton getTargets;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable targetTable;
     // End of variables declaration//GEN-END:variables
 }
